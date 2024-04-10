@@ -11,11 +11,10 @@ export const useGetCalls = () => {
   useEffect(() => {
     const loadCalls = async () => {
       if (!client || !user?.id) return;
-      
+
       setIsLoading(true);
 
       try {
-        // https://getstream.io/video/docs/react/guides/querying-calls/#filters
         const { calls } = await client.queryCalls({
           sort: [{ field: 'starts_at', direction: -1 }],
           filter_conditions: {
@@ -41,12 +40,12 @@ export const useGetCalls = () => {
   const now = new Date();
 
   const endedCalls = calls?.filter(({ state: { startsAt, endedAt } }: Call) => {
-    return (startsAt && new Date(startsAt) < now) || !!endedAt
-  })
+    return (startsAt && new Date(startsAt) < now) || !!endedAt;
+  });
 
   const upcomingCalls = calls?.filter(({ state: { startsAt } }: Call) => {
-    return startsAt && new Date(startsAt) > now
-  })
+    return startsAt && new Date(startsAt) > now;
+  });
 
-  return { endedCalls, upcomingCalls, callRecordings: calls, isLoading }
+  return { endedCalls, upcomingCalls, callRecordings: calls, isLoading };
 };
