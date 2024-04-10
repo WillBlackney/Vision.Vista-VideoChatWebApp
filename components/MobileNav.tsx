@@ -1,17 +1,12 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { sidebarLinks } from "@/constants";
-import { cn } from "@/lib/utils";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { sidebarLinks } from '@/constants';
+import { cn } from '@/lib/utils';
 
 const MobileNav = () => {
   const pathname = usePathname();
@@ -50,9 +45,9 @@ const MobileNav = () => {
                         href={item.route}
                         key={item.label}
                         className={cn(
-                          "flex gap-4 items-center p-4 rounded-lg w-full max-w-60",
+                          'flex gap-4 items-center p-4 rounded-lg w-full max-w-60',
                           {
-                            "bg-blue-1": isActive,
+                            'bg-blue-1': isActive,
                           }
                         )}
                       >
