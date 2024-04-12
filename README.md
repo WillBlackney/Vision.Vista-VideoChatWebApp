@@ -1,5 +1,4 @@
 # Vision Vista: A Free Video Chat Room Web App!
-![](screenshots/main_display.png)
 
 1. 🤖 [Introduction](#introduction)
 2. ⚙️ [Tech Stack](#tech-stack)
