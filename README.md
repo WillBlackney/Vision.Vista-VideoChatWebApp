@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Vision Vista: A Free Video Chat Room Web App!
+![](screenshots/main_display.png)
 
-## Getting Started
+## 📋 <a name="table">Table of Contents</a>
 
-First, run the development server:
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Screenshots](#screenshots)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## <a name="introduction">🤖 Introduction</a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Vision Vista is a video chat room web app that emulates many of the features of Zoom and Microsoft Teams. It enables users to securely log in, create meetings and access various meeting functionalities such as recording, screen sharing, and managing participants. The app can run in any browser and is <b>mobile-friendly</b>.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<a href="https://www.visionvista.net" target="_blank"><b>Experience a live demo of the app here!</b></a>. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## <a name="tech-stack">⚙️ Tech Stack</a>
 
-## Learn More
+- <a href="https://nextjs.org/" target="_blank"><b>Next.js</b></a>. 
+- <a href="https://www.typescriptlang.org/" target="_blank"><b>Typescript</b></a>. 
+- <a href="https://clerk.com/" target="_blank"><b>Clerk</b></a>. 
+- <a href="https://getstream.io/" target="_blank"><b>Get Stream CSS</b></a>. 
+- <a href="https://ui.shadcn.com/" target="_blank"><b>Shadcn UI</b></a>. 
+- <a href="https://tailwindcss.com/" target="_blank"><b>Tailwind CSS</b></a>. 
 
-To learn more about Next.js, take a look at the following resources:
+## <a name="features">🔋 Features</a>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+👉 **Authentication**: Implements authentication and authorization features using Clerk, allowing users to securely log in via social sign-on or traditional email and password methods, while ensuring appropriate access levels and permissions within the platform.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+👉 **New Meeting**: Quickly start a new meeting, configuring camera and microphone settings before joining.
 
-## Deploy on Vercel
+👉 **Meeting Controls**: Participants have full control over meeting aspects, including recording, emoji reactions, screen sharing, muting/unmuting, sound adjustments, grid layout, participant list view, and individual participant management (pinning, muting, unmuting, blocking, allowing video share).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+👉 **Exit Meeting**: Participants can leave a meeting, or creators can end it for all attendees.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+👉 **Schedule Future Meetings**: Input meeting details (date, time) to schedule future meetings, accessible on the 'Upcoming Meetings' page for sharing the link or immediate start.
+
+👉 **Past Meetings List**: Access a list of previously held meetings, including details and metadata.
+
+👉 **View Recorded Meetings**: Access recordings of past meetings for review or reference.
+
+👉 **Personal Room**: Users have a personal room with a unique meeting link for instant meetings, shareable with others.
+
+👉 **Join Meetings via Link**: Easily join meetings created by others by providing a link.
+
+👉 **Secure Real-time Functionality**: All interactions within the platform are secure and occur in real-time, maintaining user privacy and data integrity.
+
+👉 **Responsive Design**: Follows responsive design principles to ensure optimal user experience across devices, adapting seamlessly to different screen sizes and resolutions.
+
+and many more, including code architecture and reusability. 
+
+## <a name="screenshots">🤸 Screenshots</a>
+
+### Login / Signup
+![](screenshots/Vision-Vista-Login.png)
+
+### Home Page
+![](screenshots/Vision-Vista-Home.png)
+
+### Schedule Meeting
+![](screenshots/Vision-Vista-Schedule-Meeting.png)
+
+### Join Meeting With Link
+![](screenshots/Vision-Vista-Join-Meeting-With-Link.png)
+
+### Call Room
+![](screenshots/Vision-Vista-Solo-Call.png)
+
+### View Call Recordings
+![](screenshots/Vision-Vista-Recordings-List.png)
+
