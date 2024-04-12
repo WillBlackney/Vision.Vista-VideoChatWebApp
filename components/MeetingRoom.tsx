@@ -22,6 +22,8 @@ import {
 import Loader from './Loader';
 import EndCallButton from './EndCallButton';
 import { cn } from '@/lib/utils';
+import { toast } from './ui/use-toast';
+import { Button } from './ui/button';
 
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
 
@@ -33,7 +35,6 @@ const MeetingRoom = () => {
   const [showParticipants, setShowParticipants] = useState(false);
   const { useCallCallingState } = useCallStateHooks();
 
-  // for more detail about types of CallingState see: https://getstream.io/video/docs/react/ui-cookbook/ringing-call/#incoming-call-panel
   const callingState = useCallCallingState();
 
   if (callingState !== CallingState.JOINED) return <Loader />;
@@ -47,6 +48,23 @@ const MeetingRoom = () => {
       default:
         return <SpeakerLayout participantsBarPosition="right" />;
     }
+  };
+
+  const copyCallInviteLink = () => {
+    // Copy the current URL to the clipboard
+    navigator.clipboard
+      .writeText(window.location.href)
+      .then(() => {
+        console.log('URL copied to clipboard: ' + window.location.href);
+        toast({
+          title: 'Link Copied',
+        });
+        // Optionally, you can show a success message to the user
+      })
+      .catch((error) => {
+        console.error('Failed to copy URL to clipboard:', error);
+        // Handle any errors that may occur
+      });
   };
 
   return (
@@ -94,6 +112,9 @@ const MeetingRoom = () => {
             <Users size={20} className="text-white" />
           </div>
         </button>
+        <Button onClick={copyCallInviteLink} className="bg-blue-1">
+          Copy Meeting Link
+        </Button>
         {!isPersonalRoom && <EndCallButton />}
       </div>
     </section>
